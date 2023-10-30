@@ -5,9 +5,10 @@ const PersonalDetails = () => {
     <div class="mx-24 mt-12 p-12 border rounded-md">
       <div class="grid gap-2 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
         <div class="text-gray-600">
-          <p class="font-medium text-2xl">Personal Details</p>
-          <p className="mt-2">
-            Please fill out all the fields carefully for the primary member of
+          <h1 className="text-[24px] font-bold mb-3" >Step-1</h1>
+          <p class="font-medium text-xl">Personal Details</p>
+          <p className="">
+            Please fill out all the fields carefully for the primary <br /> member of
             the family.
           </p>
         </div>
@@ -35,6 +36,37 @@ const PersonalDetails = () => {
                 value=""
                 placeholder="email@domain.com"
               />
+            </div>
+            <div class="md:col-span-5">
+              <label for="phone">Phone Number</label>
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                placeholder="91XXXXXXXX"
+              />
+            </div>
+            <div class="md:col-span-2">
+              <label for="dob">Date of Birth</label>
+              <input
+                type="date"
+                name="dob"
+                id="dob"
+                class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                value=""
+                placeholder=""
+              />
+            </div>
+            <div class="md:col-span-3">
+              <label for="countries" className="block  text-sm  ">Gender</label>
+              <select id="countries" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
+                <option selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="na">Prefer not to say</option>
+              </select>
             </div>
 
             <div class="md:col-span-3">
@@ -156,7 +188,7 @@ const PersonalDetails = () => {
             </div>
 
             <div class="md:col-span-1">
-              <label for="zipcode">Zipcode</label>
+              <label for="zipcode">Pincode</label>
               <input
                 type="text"
                 name="zipcode"
@@ -168,25 +200,24 @@ const PersonalDetails = () => {
             </div>
 
             <div class="md:col-span-5">
-              <div class="inline-flex items-center">
-                <input
-                  type="checkbox"
-                  name="billing_same"
-                  id="billing_same"
-                  class="form-checkbox"
-                />
-                <label for="billing_same" class="ml-2">
-                  My billing address is different than above.
-                </label>
-              </div>
+              <label for="full_name">Adhar Card</label>
+              <input
+                type="text"
+                name="adhar"
+                id="adhar"
+                class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                placeholder="Enter your 12 digit Adhar Number"
+              />
             </div>
+
+          
 
             <div class="md:col-span-2"></div>
 
             <div class="md:col-span-5 text-right">
               <div class="inline-flex items-end">
-                <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
-                  Save
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                   Next
                 </button>
               </div>
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 import img from "../img/img1.png";
 import Nav from "../components/navbar/Nav";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <div>
         <Nav />
         <section className="text-gray-600 body-font px-16 ">
-          <div className="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
+          <div className="container mx-auto flex px-5 py-16 md:flex-row flex-col items-center">
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
               <img
                 className="object-cover object-center rounded"
@@ -20,7 +21,7 @@ const Home = () => {
             <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
               <h1 className="text-left text-4xl font-bold mt-10 text-gray-800">
                 Welcome to <br />
-                <span className="text-indigo-500 text-6xl mt-5">
+                <span className="text-[#5b955d] text-6xl mt-5">
                   Automated{" "}
                 </span>
                 <span className="text-6xl text-gray-800">
@@ -39,7 +40,7 @@ const Home = () => {
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="3"
-                          class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                          class="text-[#5b955d] w-6 h-6 flex-shrink-0 mr-4"
                           viewBox="0 0 24 24"
                         >
                           <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -58,7 +59,7 @@ const Home = () => {
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="3"
-                          class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                          class="text-[#5b955d] w-6 h-6 flex-shrink-0 mr-4"
                           viewBox="0 0 24 24"
                         >
                           <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -77,7 +78,7 @@ const Home = () => {
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="3"
-                          class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                          class="text-[#5b955d] w-6 h-6 flex-shrink-0 mr-4"
                           viewBox="0 0 24 24"
                         >
                           <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -92,8 +93,8 @@ const Home = () => {
                 </div>
               </section>
               <div className="flex justify-center gap-4">
-                <Link to="/register">
-                  <button className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded-full text-md font-medium">
+                <Link to="/register/info">
+                  <button className="inline-flex items-center text-white bg-[#5b955d] border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded-full text-md font-medium">
                     Get Started
                     <svg
                       fill="none"
@@ -112,6 +113,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const RegistrationInfo = () => {
   return (
@@ -21,11 +22,11 @@ const RegistrationInfo = () => {
             <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
               <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
-            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">
               1
             </div>
             <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-              <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -56,11 +57,11 @@ const RegistrationInfo = () => {
             <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
               <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
-            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">
               2
             </div>
             <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-              <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -90,11 +91,11 @@ const RegistrationInfo = () => {
             <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
               <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
-            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">
               3
             </div>
             <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-              <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -125,11 +126,11 @@ const RegistrationInfo = () => {
             <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
               <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
-            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">
               4
             </div>
             <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-              <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <div class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -158,13 +159,15 @@ const RegistrationInfo = () => {
         </div>
       </section>
 
-      <div className="flex w-full justify-center">
-        <button
-          type="button"
-          className="bg-indigo-500 hover:bg-indigo-700 text-white font-medium py-2 px-8 rounded"
-        >
-          Proceed
-        </button>
+      <div className="flex w-full justify-center mb-12">
+        <Link to="/register/member-registration">
+          <button
+            type="button"
+            className="bg-green-500 hover:bg-green-700 text-white font-medium py-2 px-8 rounded"
+          >
+            Proceed
+          </button>
+        </Link>
       </div>
     </div>
   );
