@@ -6,6 +6,7 @@ import RegisterInfo from "./pages/RegisterInfo";
 import MemberRegistration from "./pages/MemberRegistration";
 import FamilyMembersDetails from "./pages/FamilyMembersDetails";
 import CredentialFormPage from "./pages/CredentialFormPage";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           path="/register/create-credentials"
           element={<CredentialFormPage />}
         />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
