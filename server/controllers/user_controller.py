@@ -16,7 +16,7 @@ def register():
 
     # List of mandatory fields
     required_fields = [
-        "name", "email", "phone", "dOB", "gender",
+        "full_name", "email", "phone", "dob", "gender",
         "address", "username", "password", "confirmPassword",
         "aadhaar", "RFID_UID"
     ]
@@ -83,7 +83,7 @@ def login():
             "email": user['email'],
             "phone": user['phone'],
             "gender": user['gender'],
-            "dob": user['dOB'],
+            "dob": user['dob'],
             "aadhaar": user['aadhaar'],
             "address": user['address']
         }

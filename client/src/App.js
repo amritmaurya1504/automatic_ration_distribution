@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import RegisterInfo from "./pages/RegisterInfo";
 import MemberRegistration from "./pages/MemberRegistration";
 import FamilyMembersDetails from "./pages/FamilyMembersDetails";
+import CredentialFormPage from "./pages/CredentialFormPage";
 
 const App = () => {
   return (
@@ -20,6 +21,10 @@ const App = () => {
         <Route
           path="/register/family-details"
           element={<FamilyMembersDetails />}
+        />
+        <Route
+          path="/register/create-credentials"
+          element={<CredentialFormPage />}
         />
       </Routes>
     </BrowserRouter>
