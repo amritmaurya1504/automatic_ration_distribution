@@ -160,7 +160,7 @@ const RegistrationInfo = () => {
       </section>
 
       <div className="flex w-full justify-center mb-12">
-        <Link to="/register/member-registration">
+        <Link to="/register/personal-details">
           <button
             type="button"
             className="bg-green-500 hover:bg-green-700 text-white font-medium py-2 px-8 rounded"

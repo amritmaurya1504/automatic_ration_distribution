@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PersonalDetails = () => {
   return (
-    <div class="mx-24 mt-12 p-12 border rounded-md">
+    <div class="mx-24 mt-8 p-8 border rounded-md">
       <div class="grid gap-2 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
         <div class="text-gray-600">
-          <h1 className="text-[24px] font-bold mb-3" >Step-1</h1>
+          <h1 className="text-[24px] font-bold mb-3">Step-1</h1>
           <p class="font-medium text-xl">Personal Details</p>
           <p className="">
-            Please fill out all the fields carefully for the primary <br /> member of
-            the family.
+            Please fill out all the fields carefully for the primary <br />{" "}
+            member of the family.
           </p>
         </div>
 
@@ -59,8 +60,13 @@ const PersonalDetails = () => {
               />
             </div>
             <div class="md:col-span-3">
-              <label for="countries" className="block  text-sm  ">Gender</label>
-              <select id="countries" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
+              <label for="countries" className="block  text-sm  ">
+                Gender
+              </label>
+              <select
+                id="countries"
+                className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+              >
                 <option selected>Select your gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -210,15 +216,15 @@ const PersonalDetails = () => {
               />
             </div>
 
-          
-
             <div class="md:col-span-2"></div>
 
             <div class="md:col-span-5 text-right">
               <div class="inline-flex items-end">
-                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                   Next
-                </button>
+                <Link to="/register/family-details">
+                  <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                    Next
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
