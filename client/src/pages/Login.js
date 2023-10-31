@@ -9,6 +9,8 @@ const Login = () => {
     username: "",
     password: "",
   });
+  const [signinSuccess, setSigninSuccess] = useState(false);
+  const [scanRfid, setScanRfid] = useState(false);
 
   const steps = ["User Authentication", "RFID Authentication"];
 
@@ -37,13 +39,16 @@ const Login = () => {
           // You can create a separate component for each step or keep the input fields directly here.
           // For simplicity, I'm keeping them directly in this function.
 
-          <UserAuth />
+          <UserAuth next={next} setSigninSuccess={setSigninSuccess} />
         );
       case 1:
         return (
           // Step 2: Social Profiles
           // Input fields for Step 2
-          <RfidAuth />
+          <RfidAuth
+            setScanRfid={setScanRfid}
+            setSigninSuccess={setSigninSuccess}
+          />
         );
 
       default:
@@ -54,10 +59,19 @@ const Login = () => {
   return (
     <div className="w-full h-screen">
       <Nav />
-      <div className="w-2/4 mx-auto mt-8">
+      <div className="w-full p-4 flex flex-col items-center">
+        <h2 class="text-gray-900 text-xl  mb-1 font-medium title-font">
+          Welcome!
+        </h2>
+        <p class="leading-relaxed mb-5 text-gray-600">
+          Login with your credentials and scan your RFID.
+        </p>
+      </div>
+
+      <div className="w-1/2 mx-auto">
         <form
           onSubmit={handleSubmit}
-          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-white rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4 flex">
             {steps.map((step, index) => (
@@ -68,21 +82,33 @@ const Login = () => {
                 <span
                   className={`text-center block border-b-4 pb-4 ${
                     currentStep === index
-                      ? "border-indigo-500"
+                      ? "border-green-700"
+                      : signinSuccess
+                      ? "border-green-500"
+                      : scanRfid
+                      ? "border-green-500"
                       : "border-gray-300"
                   }`}
                 >
                   {step}
                 </span>
                 <div
-                  className={`absolute top-[173px] w-6 h-6 rounded-full ${
-                    currentStep === index ? "bg-indigo-500" : "bg-gray-300"
+                  className={`absolute top-[253px] w-6 h-6 rounded-full ${
+                    currentStep === index
+                      ? "bg-green-700"
+                      : signinSuccess
+                      ? "bg-green-500"
+                      : scanRfid
+                      ? "bg-green-500"
+                      : "bg-gray-300"
                   } `}
                 ></div>
 
                 {index === steps.length - 1 && (
                   <div
-                    className={`absolute top-[173px] right-[415px] w-6 h-6 rounded-full bg-gray-300`}
+                    className={`absolute top-[253px] right-[400px] w-6 h-6 rounded-full ${
+                      scanRfid ? "bg-green-500" : "bg-gray-300"
+                    }`}
                   ></div>
                 )}
               </div>
@@ -90,16 +116,6 @@ const Login = () => {
           </div>
 
           {renderStep()}
-
-          <div className="flex mt-8">
-            <button
-              type="button"
-              onClick={next}
-              className="bg-indigo-500 hover:bg-indigo-700 text-white font-medium py-2 px-8 rounded"
-            >
-              Proceed
-            </button>
-          </div>
         </form>
       </div>
     </div>

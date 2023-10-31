@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import RegisterInfo from "./pages/RegisterInfo";
 import MemberRegistration from "./pages/MemberRegistration";
 import FamilyMembersDetails from "./pages/FamilyMembersDetails";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           path="/register/family-details"
           element={<FamilyMembersDetails />}
         />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
